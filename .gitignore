@@ -1,0 +1,77 @@
+# Common files to ignore for a Python project with Docker and common editors
+
+# Environment / secrets
+.env
+.venv/
+venv/
+env/
+ENV/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+wheelhouse/
+
+# Installer logs
+pip-log.txt
+
+# Test / coverage
+.pytest_cache/
+.tox/
+.coverage
+coverage.xml
+htmlcov/
+
+# Virtual environments
+.venv/
+ENV/
+env/
+
+# VS Code / JetBrains
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+logs/
+*.log
+tmp/
+temp/
+
+# Databases
+*.sqlite3
+*.db
+
+# PyInstaller
+*.manifest
+*.spec
+
+# mypy / pylance
+.mypy_cache/
+
+# Coverage / reports
+coverage/
+
+# Node (if present)
+node_modules/
+
+# Docker
+# Do NOT ignore Dockerfile or .dockerignore – these should be versioned.
+# Ignore local docker-compose override files
+docker-compose.override.yml
