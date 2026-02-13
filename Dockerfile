@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
         libpq-dev \
         gcc \
         python3-dev \
+        postgresql \
         && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
@@ -17,9 +18,10 @@ RUN if [ -f requirements.txt ]; then \
         pip install --no-cache-dir -r requirements.txt; \
         fi
 
-COPY app.py .
-COPY db/ .
-
+COPY . .
 EXPOSE 8003
+
+RUN useradd app
+USER app
 
 CMD ["python", "app.py"]
